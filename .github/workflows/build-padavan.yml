@@ -36,11 +36,7 @@ jobs:
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
-    - name: Set Golang
-      run: |
-        cd /opt/hostedtoolcache/go
-        rm -rf /opt/hostedtoolcache/go/1.15.9
-        mv 1.16.1 1.15.9
+
     - name: Build Firmware
       env:
         TNAME: K2P-5.0
